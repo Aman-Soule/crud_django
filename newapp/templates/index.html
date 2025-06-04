@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 {% load static %}
+{% load medecin_tags %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
 
 <body>
@@ -37,7 +38,14 @@
                 </td>
             </tr>
             {% endfor %}
-               
+            <tfoot>
+                <th>Total</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>{% total_medecin %}</th>
+            </tfoot>
 
            
            
@@ -45,6 +53,7 @@
         <br><br>
         <a href="{% url 'add' %}"><button id="new3">Ajout Medecin</button></a>
     </div>
+    
 </body>
 
 </html>

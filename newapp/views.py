@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from .models import Medecin
 # Create your views here.
 #page permettant de créer nos fonctions (ex: ajout, supressions, ...)
+
 def index(request):
     med = Medecin.objects.all()
     return render(request, 'index.html',{'med':med})
